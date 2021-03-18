@@ -3,7 +3,7 @@
 
 An easy to use Interactive Graph Path visualizer with batteries included to implement your own Algorithm Visualization.
 
-### Try (use Safari or Chorme or Firefox): [Here](https://raj457036.github.io/Path-Finding-Visualizer)
+### Try (use Safari or Chorme or Firefox): [Here](https://shikhar1020jais1.github.io/Path-Searching-Visualizer)
 
 <img src="src/assets/Screenshot (1).png" align="center" style="max-width: 60%">
 
