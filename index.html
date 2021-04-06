@@ -36,8 +36,8 @@
 
 <body>
     <section id="home">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-0 sticky-top">
-            <a class="navbar-brand d-flex text-white">
+        <nav class="navbar navbar-expand-lg sticky-top navigationbar border">
+            <a class="navbar-brand">
         PathSearch Algorithm - Visualizer &nbsp;
       </a>
             <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,44 +109,11 @@
                                 </ul>
                             </li>
 
-                            <!-- <a class="dropdown-item algo-selection" data-algo="unknown"
-                  >Unknown Algorithm</a
-                > -->
-                            <!-- <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Upcoming Updates</h6>
-                <a class="dropdown-item disabled" href="#" data-algo="dfsMaze"
-                  >Best First Search</a> -->
+
                         </ul>
                     </li>
                     &nbsp;
-                    <!-- <b data-toggle="tooltip" title="Selected Algorithm">Algo: </b> -->
-                    <!-- <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                id="algo-choice"
-                role="button"
-                data-toggle="dropdown"
-                title="Change Speed"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="fa fa-tachometer"></i> Speed
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item speed-selection" data-speed="Fast">
-                  Fast
-                </a>
-                <a class="dropdown-item speed-selection" data-speed="Medium">
-                  Medium
-                </a>
-                <a class="dropdown-item speed-selection" data-speed="Slow">
-                  Slow
-                </a>
-                <a class="dropdown-item speed-selection" data-speed="Step">
-                  Step Mode
-                </a>
-              </div>
-            </li> -->
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">
                             <i class="fa fa-cog"></i> Edit
@@ -165,54 +132,31 @@
                             <div class="p-2 d-none d-md-block">
                                 <div class="input-group input-group-sm">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-sm">Columns</span
-                      >
-                    </div>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="column-count"
-                      min="0"
-                    />
-                  </div>
-                </div> 
-                    <!-- boxsize input -->
-                     <div class="p-2">
-                  <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-sm"
-                        >Box Size</span
-                      >
-                    </div>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="box-size"
-                      value="0"
-                      placeholder="0 = auto"
-                      min="10"
-                    />
-                  </div>
-                </div> 
-                    <!-- ε-admissible input -->
-                     <div class="p-2">
-                  <div
-                    class="input-group input-group-sm"
-                    data-toggle="tooltip"
-                    data-title="Used for weighted heuristic function hw = ε*ha(n)"
-                  >
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="">ε admissible</span>
+                                        <span class="input-group-text" id="inputGroup-sizing-sm">Columns</span>
+                                    </div>
+                                    <input type="number" class="form-control" id="column-count" min="0" />
+                                </div>
+                            </div>
+                            <!-- boxsize input -->
+                            <div class="p-2">
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-sm">Box Size</span>
+                                    </div>
+                                    <input type="number" class="form-control" id="box-size" value="0" placeholder="0 = auto" min="10" />
+                                </div>
+                            </div>
+                            <!-- ε-admissible input -->
+                            <div class="p-2">
+                                <div class="input-group input-group-sm" data-toggle="tooltip" data-title="Used for weighted heuristic function hw = ε*ha(n)">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="">ε admissible</span>
                                     </div>
                                     <input type="number" class="form-control" id="admissible-value" value="5" min="1" />
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <!-- <li class="nav-item d-lg-none">
-                    <a class="nav-link" onclick="openFullscreen()">
-                        <i class="fa fa-expand"></i> Toggle Full Screen</a>
-                </li> -->
 
 
                 </ul>
@@ -222,10 +166,6 @@
             <section id="toolbar">
                 <div class="d-flex row justify-content-center px-2">
 
-                    <!-- algorithm name display and clear graph btn -->
-                    <!-- <a class="nav-link " href="#" id="fill-block" role="button" data-toggle="dropdown" title="Create Wall Blocks" aria-haspopup="true" aria-expanded="false" onclick="RandomGrid()">
-                        <i class="fa fa-th-large"></i> Random Grid
-                    </a> -->
                     <div class="pb-0 p-2 d-flex justify-content-center align-items-center">
 
                         <button class="btn btn-sm btn-secondary" id="reset-graph-btn">
@@ -246,33 +186,26 @@
             </a>
 
                     </div>
-
-
-
-
-
-
-
                 </div>
                 <div class="d-flex row justify-content-center px-2">
                     <div class="pb-0 p-2">
                         <div class="btn-group btn-group-sm btn-group-toggle" role="group" aria-label="tool mode" data-toggle="buttons">
                             <label class="btn btn-outline-primary" data-toggle="tooltip" title="Start Node/Block for the path">
-            <input type="radio" name="selectionMode" value="START_NODE" autocomplete="off" />
-            <i class="fa fa-arrow-up"></i>
-            Start
-          </label> &nbsp; <label class="btn btn-outline-danger" data-toggle="tooltip" title="Target Node/Block for the path">
-            <input type="radio" name="selectionMode" value="TARGET_NODE" autocomplete="off" />
-            <i class="fa fa-arrow-right"></i>
-            End
-          </label> &nbsp; <label class="btn btn-outline-secondary active" data-toggle="tooltip" title="Wall blocks will remove the node connection with its neighbours">
-            <input type="radio" name="selectionMode" value="WALL_NODES" autocomplete="off" checked />
-            <i class="fa fa-square"></i>
-            Walls
-          </label> &nbsp; <label class=" btn btn-outline-secondary  nav-link " href="#" id="fill-block" role="button" data-toggle="dropdown" title="Create Wall Blocks" aria-haspopup="true" aria-expanded="false" onclick="RandomGrid()">
+                <input type="radio" name="selectionMode" value="START_NODE" autocomplete="off" />
+                <i class="fa fa-arrow-up"></i>
+                Start
+              </label> &nbsp; <label class="btn btn-outline-danger" data-toggle="tooltip" title="Target Node/Block for the path">
+                <input type="radio" name="selectionMode" value="TARGET_NODE" autocomplete="off" />
+                <i class="fa fa-arrow-right"></i>
+                End
+              </label> &nbsp; <label class="btn btn-outline-secondary active" data-toggle="tooltip" title="Wall blocks will remove the node connection with its neighbours">
+                <input type="radio" name="selectionMode" value="WALL_NODES" autocomplete="off" checked />
+                <i class="fa fa-square"></i>
+                Walls
+              </label> &nbsp; <label class=" btn btn-outline-secondary  nav-link " href="#" id="fill-block" role="button" data-toggle="dropdown" title="Create Wall Blocks" aria-haspopup="true" aria-expanded="false" onclick="RandomGrid()">
 
-            <i class="fa fa-th-large"></i> Random Grid
-          </label>
+                <i class="fa fa-th-large"></i> Random Grid
+              </label>
 
 
                         </div>
